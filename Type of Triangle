@@ -1,0 +1,9 @@
+Select Case
+
+        When 2 * Greatest(A,B,C) >= (A + B + C) then  "Not A Triangle"
+        When (A = B and B = C) then  "Equilateral"
+        When (A = B or A = C or B = c) then   "Isosceles"
+        Else
+        "Scalene"
+        End
+        FROM TRIANGLES;
