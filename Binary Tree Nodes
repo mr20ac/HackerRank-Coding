@@ -1,0 +1,9 @@
+Select case 
+           when  P is null then Concat(N, " Root")
+           when N in (select distinct P FROM BST) then concat(N, " Inner")
+       else concat(N, " Leaf")
+       end 
+       from BST
+
+ORDER BY N ASC;
+
