@@ -1,0 +1,3 @@
+Select if(d.Grade < 8,NULL,s.Name), d.grade,s.Marks FROM students as s  join Grades as d
+where s.marks between d.min_mark and d.max_mark
+order by grade desc, name asc;
