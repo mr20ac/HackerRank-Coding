@@ -1,0 +1,23 @@
+// Importing the required module
+const http = require('http');
+
+// Creating a server object
+const server = http.createServer((req, res) => {
+    // Logging request headers
+    console.log('Request Headers:', req.headers);
+
+    // Logging request URL
+    console.log('Request URL:', req.url);
+
+    // Logging request method and protocol
+    console.log('Request Method:', req.method);
+    console.log('Request Protocol:', req.protocol);
+
+    // Sending a response
+    res.end('Hello, this is a basic Node.js server!');
+});
+
+// Making the server listen on port 3000
+server.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
