@@ -1,0 +1,14 @@
+// Function to calculate 5 + 5
+function calculate(callback) {
+    const result = 5 + 5;
+    callback(result);
+}
+
+// Function to add 10 to the result passed as an argument
+function addTen(result) {
+    const finalResult = result + 10;
+    console.log("Final result:", finalResult);
+}
+
+// Call the calculate function and pass the addTen function as a callback
+calculate(addTen);
