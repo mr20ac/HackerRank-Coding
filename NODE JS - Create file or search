@@ -1,0 +1,28 @@
+const fs = require("fs");
+
+const path = require("path");
+
+if (process.argv.length !== 4) {
+    console.log(process.argv.length);
+    return;
+}
+const filename = process.argv[2];
+const text = process.argv[3];
+
+fs.readFile(filename,"utf-8", (err,content) => {
+if (err) {
+    if (err.code === "ENOENT") {
+        console.log("file does not exist");
+        fs.writeFile(filename,text, (err) => {
+            if (err) throw err;
+            console.log("file created ad" + path.resolve(filename));
+            fs.readFile(filename,"utf-8", (err,created) => {
+                console.log("the created text is " + created);
+;            });
+        });
+    }
+} else {
+    console.log("file found at" + path.resolve(filename));
+    console.log("text is" + content);
+}
+});
