@@ -1,0 +1,3 @@
+select customers.customername,customers.phone, sum(payments.amount) from customers
+join  payments on customers.customernumber = payments.customernumber
+where customers.customernumber = 114;
