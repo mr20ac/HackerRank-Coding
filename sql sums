@@ -1,0 +1,3 @@
+set @sums = ( select
+sum(amount) from payments join customers on payments.customernumber = customers.customernumber
+ where customers.customerNumber  = 321); 
