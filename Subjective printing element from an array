@@ -1,0 +1,7 @@
+o = ["dos","assd","popo"];
+
+o.forEach(element => {
+    if (element.includes("a" ) === false) {
+        console.log(element);
+    }
+})
